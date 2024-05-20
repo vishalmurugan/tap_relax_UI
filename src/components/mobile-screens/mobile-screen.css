@@ -1,0 +1,144 @@
+.share-info-card {
+    width: 326px;
+    min-height: 575px;
+    border-radius: 17px;
+    border: 1px solid #000000;
+    margin-top: 10%;
+}
+
+.connect-info-card {
+    width: 326px;
+    min-height: 500px;
+    height: auto;
+    border-radius: 17px;
+    border: 1px solid #000000;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.share-info-text-title {
+    color: black;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.Connect-btn {
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 286px;
+    height: 38px;
+    font-size: 16px;
+    background-color: black;
+}
+
+.share-form-group input[type="text"],
+input[type="email"] {
+    border-radius: 90px;
+    background-color: #D9D9D9;
+    width: 284px;
+    height: 41px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.rounded-image {
+    width: 87px;
+    height: 87px;
+    background-image: url('../../assets/profile-pic.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #1DDA63;
+}
+
+.share-info-rounded-image {
+    width: 87px;
+    height: 87px;
+    background-image: url('../../assets/profile-pic.png');
+    background-size: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #1DDA63;
+    position: absolute;
+    margin-top: -30%;
+    margin-left: 25%;
+}
+
+.dot-dots {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot-dots span {
+    display: block;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.dot-dots .firstDot {
+    width: 10px;
+    height: 10px;
+}
+
+.dot-dots .secondDot {
+    width: 8px;
+    height: 8px;
+}
+
+.dot-dots .thirdDot {
+    width: 5px;
+    height: 5px;
+}
+
+.dot-dots .fourthDot {
+    width: 3px;
+    height: 3px;
+}
+
+.contact-btn {
+    width: 157px;
+    height: 38px;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.Get-card-btn {
+    width: 357px;
+    height: 38px;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.contact-info-card {
+    background: linear-gradient(to right, #EEEEEE, #F8F8F8);
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.contact-info-card img {
+    width: 25px;
+    height: 25px;
+}
+
+.accordition-img {
+    width: 30px;
+    height: 25px;
+}
+
+span {
+    font-size: 14px;
+}
+

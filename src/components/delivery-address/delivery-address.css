@@ -1,0 +1,345 @@
+.form-group input[type="text"] {
+    font-size: 15px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+label {
+    color: #474747;
+    font-size: 16px;
+    margin-top: 2%;
+}
+
+.form-group {
+    border-bottom: 1px solid #474747;
+}
+
+.form-group input[type="text"]::placeholder {
+    color: white;
+}
+
+
+.select-form-group select {
+    width: 90%;
+    margin: auto;
+    font-size: 15px;
+    border: 1px solid #474747;
+    background-color: black;
+    color: white;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #474747;
+    box-shadow: none;
+}
+
+
+.select-form-group select:focus {
+    border-color: #474747;
+    background-color: black;
+    color: white;
+}
+
+.delivery-card {
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+    width: 911px;
+    height: 576px;
+    border: 1px solid #474747;
+    border-radius: 20px;
+}
+
+.personal-company-card, .personal-information-card {
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+    width: 768px;
+    height: 696px;
+    border: 1px solid #474747;
+    border-radius: 20px;
+}
+
+.personal-payment-card {
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+    width: 768px;
+    height: 601px;
+    border: 1px solid #474747;
+    border-radius: 20px;
+}
+
+.form-group {
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.delivery-address-next-btn,
+.company-info-next-btn,
+.company-payment-next-button {
+    width: 246px;
+    height: 50px;
+    background-color: #1DDA63;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+.company-info-text-container {
+    margin-top: -70%;
+}
+
+.payment-sucess-message {
+    margin-top: -30%;
+}
+
+.payment-sucess-message h1 {
+    font-size: 39px;
+}
+
+.payment-gateway-text {
+    font-size: 69px;
+}
+
+.personal-text-container {
+    margin-top: -18%;
+}
+
+.Update-button {
+    min-width: 150px;
+    height: 50px;
+    background-color: #1DDA63;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+.back-button {
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid #1DDA63;
+    color: #1DDA63;
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+.add-social-media-btn {
+    width: 315px;
+    height: 42px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 16px;
+}
+
+.social-media-drop-down-item .dropdown-item {
+    width: 315px;
+    background-color: black;
+    font-size: 16px;
+}
+
+.social-media-drop-down-item .dropdown-item img {
+    background-color: black;
+    height: 25px;
+}
+
+.add-social-btn {
+    width: 341px;
+    height: 42px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.dropdown-model div {
+    background-color: black;
+    width: 340px;
+    font-size: 15px;
+}
+
+.add-social-media-text {
+    color: #1DDA63;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.add-social-media-text:hover {
+    color: #1DDA63;
+    background-color: black;
+}
+
+.dropdown-model a:hover {
+    background-color: black;
+}
+
+@media only screen and (max-width: 767px) {
+    .delivery-card, .personal-company-card, .personal-payment-card, .personal-information-card {
+        width: 90%;
+    }
+
+    .personal-company-card, .personal-information-card {
+        margin-top: 10%;
+    }
+
+    .personal-payment-card {
+        height: 50vh;
+    }
+
+    .personal-information-card {
+        height: 90vh;
+    }
+
+    .delivery-card {
+        height: 90vh;
+    }
+
+    .personal-company-card {
+        height: 100vh;
+    }
+
+    .group-image, .Group430 {
+        display: none;
+    }
+
+    .back-button, .company-personal-back-button {
+        width: 40%;
+    }
+
+    .company-personal-button-container {
+        margin-left: 32%;
+    } 
+
+    .Update-button {
+        width: 40%;
+    }
+
+    .company-info-text-container {
+        margin-top: 5%;
+    }
+
+    .update-company-info-container, .update-your-info-container {
+        width: 50%;
+        margin: auto;
+    }
+
+    .personal-text-container {
+        margin-top: 10%;
+    }
+
+    .payment-success-container img {
+        height: 50vh;
+    }
+
+    .payment-sucess-message {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .payment-sucess-message h1 {
+        font-size: 30px;
+    }
+
+    .payment-gateway-text {
+        font-size: 30px;
+    }
+
+    .delivery-address-next-btn {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        align-items: center;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .delivery-card {
+        width: 911px;
+        height: 576px;
+    }
+    
+    .personal-company-card, .personal-information-card {
+        width: 768px;
+        height: 696px;
+    }
+    
+    .personal-payment-card {
+        width: 768px;
+        height: 601px;
+    }
+
+    .personal-text-container, .personal-info-text-container {
+        margin-top: -18%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .delivery-card {
+        width: 911px;
+        height: 576px;
+    }
+    
+    .personal-company-card, .personal-information-card {
+        width: 768px;
+        height: 696px;
+    }
+    
+    .personal-payment-card {
+        width: 768px;
+        height: 601px;
+    }
+
+    .personal-text-container, .personal-info-text-container {
+        margin-top: -18%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+    .delivery-card {
+        width: 911px;
+        height: 576px;
+    }
+    
+    .personal-company-card, .personal-information-card {
+        width: 768px;
+        height: 696px;
+    }
+    
+    .personal-payment-card {
+        width: 768px;
+        height: 601px;
+    }
+
+    .personal-text-container, .personal-info-text-container {
+        margin-top: -18%;
+    }
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  .tag {
+    background-color:#1DDA63;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight:600;
+  }
+  .tag span {
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 0px 7px 2px 7px;
+  }

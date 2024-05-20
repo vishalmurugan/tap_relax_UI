@@ -1,0 +1,172 @@
+
+#sidenav {
+  position: fixed;
+  width: 300px;
+  height: auto;
+  top: 10vh;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999;
+  border-bottom: 1px solid #1DDA63;
+  align-items: center;
+  display: flex;
+}
+
+#sidenav.open {
+  left: -300px;
+}
+
+#sidenav .logo {
+  width: 100%;
+  padding: 5px;
+  display: block;
+}
+
+#sidenav .logo a {
+  color: #dadada;
+  font-size: 30px;
+}
+
+#sidenav .logo a.nav-icon {
+  display: none;
+}
+
+#sidenav .menu {
+  position: static;
+}
+
+#sidenav .menu ul {
+  list-style: none;
+  background: #101010;
+  padding: 10% 0;
+  margin: 0;
+}
+
+#sidenav .menu ul li {
+  padding: 6px 14%;
+}
+
+#sidenav .menu ul li a {
+  font-size: 16px;
+  font-weight: 300;
+  display: block;
+}
+
+#sidenav .menu ul li ul {
+  list-style: none;
+  padding: 10px 15px;
+  border-top: solid 1px rgba(255, 255, 255, 0.08);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.08);
+}
+
+.navbar-items {
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.navbar-items:hover {
+  background-color: #1DDA63;
+  text-decoration: none;
+  border-radius: 10px;
+  width: 100%;
+  color: black;
+  font-weight: 900;
+}
+
+.navbar-items.active {
+  background-color: #1DDA63;;
+  border-radius: 10px;
+  color: black;
+  width: 100%;
+  font-weight: 900;
+}
+
+.nav-rounded-image {
+  width: 150px;
+  height: 150px;
+  background-image: url('../../../assets/profile-pic.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #1DDA63;
+  margin-left: 15%;
+}
+
+.dashboard-right-side-layout {
+  margin-top: 10%;
+}
+
+@media (max-width: 768px) {
+
+  .top-nav {
+    width: 100%;
+  }
+
+  #sidenav {
+    width: 90%;
+    background: none;
+  }
+
+  .top-nav .logo {
+    padding: 10px 20px;
+  }
+
+  #sidenav .logo a.nav-icon {
+    display: inline;
+    margin-top: -1%;
+  }
+
+  #sidenav .menu {
+    display: none;
+  }
+
+  #sidenav .menu.open {
+    position: fixed;
+    top: -10vh;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    display: block !important;
+    margin-top: 15%;
+    overflow-y: auto;
+    width: 100%;
+  }
+
+  #sidenav .menu ul {
+    border-top: solid 1px #333;
+    margin-top: 5%;
+  }
+
+  #sidenav .menu ul li {
+    padding: 6px 5%;
+  }
+
+  .nav-rounded-image {
+    width: 50px;
+    height: 50px;
+    background-image: url('../../../assets/profile-pic.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #1DDA63;
+  }
+
+  .dashboard-right-side-layout {
+    width: 90%;
+  }
+}

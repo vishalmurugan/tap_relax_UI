@@ -1,0 +1,439 @@
+/* rewards css part */
+.rewards-card {
+    width: 911px;
+    height: 700px;
+    border-radius: 18px;
+    border: 1px solid #474747;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.redeem-button {
+    background-color: #1DDA63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+
+.horizontal-line {
+    border: none;
+    border-top: 1px solid gray;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom: 5px;
+}
+
+.refer-button {
+    background: linear-gradient(85.11deg, rgba(181, 181, 181, 0.28) 0.43%, rgba(2, 96, 37, 0.03) 102.71%);
+    width: 336px;
+    height: 45px;
+    border-radius: 22px;
+    font-size: 15px;
+    color: #1DDA63;
+    border: 1px solid linear-gradient(105.02deg, #FFFFFF -0.61%, #666666 99.8%);
+}
+
+
+/* profile page css part */
+
+.profile-card {
+    width: 911px;
+    height: 700px;
+    border-radius: 18px;
+    border: 1px solid #474747;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+}
+
+.title-text {
+    margin-top: 5%;
+    font-size: 30px;
+}
+
+.profile-rounded-image {
+    width: 100px;
+    height: 100px;
+    background-image: url('../../assets/profile-pic.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #1DDA63;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-title-text {
+    margin-top: 10%;
+    font-size: 30px;
+	margin-left: 35%;
+}
+
+
+.edit-button {
+    margin-top: 25%;
+    margin-left: 65%;
+    background-color: #1DDA63;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 80px;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+
+/* share card page css part */
+
+.share-card-container {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    width: 705px;
+    height: 749px;
+}
+
+.share-cards-profile-pic {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    background-image: url('../../assets/profile-pic.png');
+    background-size: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #1DDA63;
+    margin-bottom: 10px;
+}
+
+.social-media-columns {
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+}
+
+.social-media-list {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+}
+
+.social-media-list img {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+.social-media-names {
+    flex-grow: 1;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+.toggle-icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 35px;
+    margin-top: 5px;
+}
+
+.share-contact {
+    background-color: rgb(67, 67, 67);
+    color: white;
+    width: 150px;
+    height: 38px;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+/* my orders page css part */
+
+.myorders-outer-layout {
+    width: 1000px;
+    height: 464px;
+    border-radius: 18px;
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.my-order-table {
+    height: 25vh;
+}
+
+
+.order-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.order-table th,
+.order-table td {
+    padding: 10px;
+    text-align: left;
+    overflow: hidden;
+    /* Added to prevent content from overflowing */
+    white-space: nowrap;
+    /* Added to prevent text wrapping */
+    text-overflow: ellipsis;
+    /* Added to show ellipsis (...) for overflowed text */
+}
+
+
+.order-table th,
+.order-table td {
+    padding: 10px;
+    text-align: left;
+    overflow: hidden;
+    /* Added to prevent content from overflowing */
+    white-space: nowrap;
+    /* Added to prevent text wrapping */
+    text-overflow: ellipsis;
+    /* Added to show ellipsis (...) for overflowed text */
+}
+
+.table-data {
+    display: flex;
+    justify-content: space-between;
+    /* Stretch mode */
+    align-items: center;
+    width: 900px;
+}
+
+.product-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.order-image img {
+    width: 120px;
+    height: 78px;
+    top: 316px;
+    left: 391px;
+    gap: 0px;
+    border-radius: 14px;
+    opacity: 0px;
+}
+
+.order-details span {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.track-order-button {
+    width: 154px;
+    height: 37.02px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    background-color: #1DDA63;
+    color: black;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* mycontact page css part */
+
+.my-contact-cards {
+    width: 911px;
+    height: 680px;
+    border-radius: 18px;
+    border: 1px solid #474747;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+}
+
+.share-contact-card {
+    width: 645px;
+    min-height: 412px;
+    border-radius: 18px;
+    background-color: white;
+}
+
+/* new contact page css part */
+
+.new-Contact-card {
+    width: 911px;
+    min-height: 680px;
+    border-radius: 18px;
+    border: 1px solid #474747;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+}
+
+.new-contact-cancel-btn {
+    width: 148px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #1DDA63;
+    color: #1DDA63;
+    font-size: 16px;
+}
+
+.new-contact-save-btn {
+    width: 148px;
+    height: 50px;
+    border-radius: 5px;
+    border:none;
+    color: black;
+    background-color: #1DDA63;
+    font-size: 16px;
+}
+
+.create-contact-btn {
+    width: 154px;
+    height: 37px;
+    border-radius: 5px;
+    border:none;
+    color: black;
+    background-color: #1DDA63;
+    font-size: 16px;   
+}
+
+.new-contact-button-container {
+    margin-top: 15%;
+}
+
+.my-contact-table thead,
+.my-contact-table tbody {
+    font-size: 16px;
+}
+
+.my-contact-table thead tr th {
+    background-color:  #595959;
+    color: white;
+}
+
+.my-contact-table thead,
+.my-contact-table tbody tr {
+    border-top: 1px solid #595959;
+    border-bottom:1px solid #595959;
+}
+
+.my-contact-table tbody tr th,
+.my-contact-table tbody tr td {
+    background-color: black;
+    color: white;
+}
+
+.my-contact-table tbody tr th,
+.my-contact-table tbody tr td, 
+.my-contact-table thead tr th {
+    border: none;
+}
+
+@media only screen and (max-width: 767px) { 
+    .profile-card {
+        margin-left: -50%;
+        height: 100vh;
+    }
+
+    .new-Contact-card {
+        margin-left: -50%;
+    }
+
+    .rewards-card {
+        margin-left: -50%;
+    }
+
+    .myorders-outer-layout {
+        margin-left: -50%;
+    }
+
+    .redeem-button {
+        display: flex;
+        justify-content: center;
+        margin-left: 40%;
+        margin-top: 20%;
+    }
+
+    .profile-card-container {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+    }
+
+    .rewards-card-container {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+    }
+
+    .new-Contact-card-container {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+    }
+
+    .my-orders-card-container {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+    }
+
+    .edit-button {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        margin-left: 10%;
+    }
+
+    .title-text {
+        margin-top: 50%;
+        display: flex;
+        justify-content: center;
+        margin-left: -20%;
+    }
+
+    .share-card-container {
+        justify-content: center;
+        height: 130vh;
+        width: 90%;
+    }
+
+    .new-contact-button-container {
+        margin-left: -20%;
+        margin-right: -5%;
+    }
+
+    .social-media-columns {
+        width: 190%;
+    }
+
+    .social-media-columns {
+        display: block;
+    }
+}

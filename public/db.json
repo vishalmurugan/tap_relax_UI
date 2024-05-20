@@ -1,0 +1,108 @@
+[
+    {
+      "id": 1,
+      "landline": "123-456-7890",
+      "mobile": "987-654-3210",
+      "email": "example1@example.com",
+      "profilePic": "profile1.jpg"
+    },
+    {
+      "id": 2,
+      "landline": "111-222-3333",
+      "mobile": "444-555-6666",
+      "email": "example2@example.com",
+      "profilePic": "profile2.jpg"
+    },
+    {
+      "id": 2,
+      "landline": "111-222-3333",
+      "mobile": "444-555-6666",
+      "email": "example2@example.com",
+      "profilePic": "profile2.jpg"
+    },
+    {
+        "id": 1,
+        "landline": "123-456-7890",
+        "mobile": "987-654-3210",
+        "email": "example1@example.com",
+        "profilePic": "profile1.jpg"
+      },
+      {
+        "id": 2,
+        "landline": "111-222-3333",
+        "mobile": "444-555-6666",
+        "email": "example2@example.com",
+        "profilePic": "profile2.jpg"
+      },
+      {
+        "id": 2,
+        "landline": "111-222-3333",
+        "mobile": "444-555-6666",
+        "email": "example2@example.com",
+        "profilePic": "profile2.jpg"
+      },
+      {
+        "id": 1,
+        "landline": "123-456-7890",
+        "mobile": "987-654-3210",
+        "email": "example1@example.com",
+        "profilePic": "profile1.jpg"
+      },
+      {
+        "id": 2,
+        "landline": "111-222-3333",
+        "mobile": "444-555-6666",
+        "email": "example2@example.com",
+        "profilePic": "profile2.jpg"
+      },
+      {
+        "id": 2,
+        "landline": "111-222-3333",
+        "mobile": "444-555-6666",
+        "email": "example2@example.com",
+        "profilePic": "profile2.jpg"
+      },
+      {
+        "id": 1,
+        "landline": "123-456-7890",
+        "mobile": "987-654-3210",
+        "email": "example1@example.com",
+        "profilePic": "profile1.jpg"
+      },
+      {
+        "id": 2,
+        "landline": "111-222-3333",
+        "mobile": "444-555-6666",
+        "email": "example2@example.com",
+        "profilePic": "profile2.jpg"
+      },
+      {
+        "id": 2,
+        "landline": "111-222-3333",
+        "mobile": "444-555-6666",
+        "email": "example2@example.com",
+        "profilePic": "profile2.jpg"
+      },
+      {
+        "id": 1,
+        "landline": "123-456-7890",
+        "mobile": "987-654-3210",
+        "email": "example1@example.com",
+        "profilePic": "profile1.jpg"
+      },
+      {
+        "id": 2,
+        "landline": "111-222-3333",
+        "mobile": "444-555-6666",
+        "email": "example2@example.com",
+        "profilePic": "profile2.jpg"
+      },
+      {
+        "id": 2,
+        "landline": "111-222-3333",
+        "mobile": "444-555-6666",
+        "email": "example2@example.com",
+        "profilePic": "profile2.jpg"
+      }
+  ]
+  

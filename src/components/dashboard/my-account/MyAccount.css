@@ -1,0 +1,189 @@
+.my-account-outer-layout {
+  width: 911px;
+  height: 738px;
+  border-radius: 18px;
+  border: 1px solid #474747;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+  padding: 10px;
+}
+
+.my-account-inner-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 542px;
+  width: 798px;
+  border-radius: 18px;
+  background-color: white;
+  padding: 40px;
+}
+
+.upper-section {
+  display: flex;
+  align-items: center;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.account-profile-picture {
+  width: 120px;
+  height: 120px;
+  background-image: url('../../../assets/profile-pic.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #1DDA63;
+  margin-right: 20px;
+}
+
+.right-column {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.action-button {
+  margin-right: 10px;
+  padding: 10px 30px 10px 30px;
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  font-size: 15px;
+  border: none;
+}
+
+.bottom-section {
+  max-height: 60%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.social-links-rows,
+.contact-info-rows {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.social-links-container,
+.contact-info-container {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-links-list,
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  width: calc(25% - 16px);
+  margin-bottom: 16px;
+}
+
+.social-links-list img,
+.contact-info-list img {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  margin-bottom: 5px;
+}
+
+.contact-info-list img {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out;
+  margin-left: 20px;
+  margin-top: -14px;
+}
+
+.account-title-text {
+  margin-top: 10%;
+  font-size: 30px;
+  margin-left: 30%;
+}
+
+.social-links-list span,
+.contact-info-list span {
+  font-size: 16px;
+  background-color: white;
+  color: black;
+}
+
+@media only screen and (max-width: 767px) {
+  .my-account-container {
+    margin-top: 10%;
+    display: flex;
+    margin-left: -45%;
+    min-height: 100vh;
+    max-height: auto;
+    margin-bottom: 10%;
+  }
+
+  .my-account-inner-card {
+    width: 90%;
+    min-height: 90vh;
+  }
+
+  .my-account-outer-layout {
+    width: 90%;
+    min-height: 100vh;
+  }
+
+  .bottom-section {
+    display: block;
+    flex-direction: column;
+  }
+
+  .social-links-list img,
+  .contact-info-list img {
+    width: 40px;
+  }
+
+  .social-links-list span,
+  .contact-info-list span {
+    font-size: 10px;
+  }
+
+  .right-column {
+    display: flex;
+    align-items: center;
+    margin-left: -70%;
+    margin-top: 90%;
+  }
+
+  .action-button {
+    font-size: 10px;
+  }
+
+  .account-profile-picture {
+    width: 80px;
+    height: 80px;
+    background-image: url('../../../assets/profile-pic.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #1DDA63;
+    margin-right: 20px;
+  }
+
+  .account-title-text {
+    margin-top: 50%;
+    margin-left: auto;
+  }
+}

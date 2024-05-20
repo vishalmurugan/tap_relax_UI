@@ -1,0 +1,261 @@
+.select-payment-card {
+    width: 911px;
+    height: 576px;
+    border: 1px solid #474747;
+    border-radius: 20px;
+}
+
+.order-total-card {
+    width: 992px;
+    min-height: 666px;
+    border: 1px solid #474747;
+    border-radius: 20px;
+}
+
+.inner-price-card {
+    background-color: #2B2B2B;
+    font-size: 18px;
+    margin-top: 2%;
+}
+
+.inner-price-card-text span {
+    margin-left: 8%;
+}
+
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group input[type="number"]  {
+    font-size: 16px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.form-group {
+    border-bottom: 1px solid #474747;
+}
+
+input::placeholder {
+    color: #727272 !important;
+}
+
+.form-control {
+    color: white;
+}
+
+.input-group {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.btn-login {
+    width: 377px;
+    height: 50px;
+    background-color: #1DDA63;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+.payment-continue-btn {
+    width: 246px;
+    height: 50px;
+    background-color: #1DDA63;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    font-size: 20px;
+}
+
+.payment-back-btn {
+    width: 246px;
+    height: 50px;
+    background-color: black;
+    border: 1px solid #1DDA63;
+    border-radius: 5px;
+    color: #1DDA63;
+    font-size: 20px;
+}
+
+.bg-pattern {
+    position: relative;
+}
+
+label {
+    font-size: 17px;
+}
+
+.login-card,
+.register-card {
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+    width: 497px;
+    height: 659px;
+    border: 1px solid #474747;
+    border-radius: 20px;
+}
+
+.payment-card-text {
+    font-size: 17px;
+    margin-left: 10%;
+}
+
+.payment-card-image {
+    height: 50px;
+    width: 50px;
+}
+
+.table-responsive {
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 20vh;
+    font-size: 17px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-right: 15px;
+}
+
+.table-responsive::-webkit-scrollbar {
+    width: 1px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #1DDA63
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #1DDA63
+}
+
+
+.table-borderless>tbody>tr>td,
+.table-borderless>tbody>tr>th,
+.table-borderless>tfoot>tr>td,
+.table-borderless>tfoot>tr>th,
+.table-borderless>thead>tr>td,
+.table-borderless>thead>tr>th {
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .group-image,
+    .bg-pattern {
+        display: none;
+    }
+
+    .login-card,
+    .register-card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+    }
+
+    .btn-login {
+        width: 80%;
+    }
+
+    .select-payment-card {
+        width: 90%;
+        height: 100vh;
+    }
+
+    .payment-card-text {
+        font-size: 15px;
+        margin-left: 10%;
+    }
+
+    .payment-card-image {
+        height: 20px;
+        width: 20px;
+    }
+
+    .table-responsive {
+        border: none;
+    }
+
+    .order-total-card {
+        width: 90%;
+        height: 90vh;
+        margin-bottom: 10%;
+    }
+
+    .table-responsive {
+        height: 20vh;
+        font-size: 15px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin-right: 15px;
+    }
+
+    .payment-back-btn {
+        margin-left: 10%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .select-payment-card,
+    .order-total-card {
+        width: 911px;
+        height: 576px;
+    }
+
+    .login-card,
+    .register-card {
+        width: 497px;
+        height: 659px;
+    }
+
+    .btn-login {
+        width: 377px;
+    }
+
+    .payment-continue-btn {
+        width: 246px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .order-total-card {
+        width: 992px;
+        height: 666px;
+    }
+
+    .login-card,
+    .register-card {
+        position: absolute;
+        top: 15%;
+        right: 10%;
+        width: 497px;
+        height: 659px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .login-card,
+    .register-card {
+        position: absolute;
+        top: 15%;
+        right: 10%;
+        width: 497px;
+        height: 659px;
+    }
+
+    .order-total-card {
+        width: 992px;
+        height: 666px;
+    }
+}

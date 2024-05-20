@@ -1,0 +1,133 @@
+.pvc-card,
+.standee-card {
+    width: 288px;
+    height: 426px;
+    border: 1px solid #474747;
+    border-radius: 20px;
+}
+
+.nfc-standee-card {
+    width: 774px;
+    height: 426px;
+    border: 1px solid #474747;
+    border-radius: 20px;
+}
+
+.standee-card {
+    margin-left: -30%;
+}
+
+
+.standee-getButton,
+.GetButton {
+    width: 237px;
+    height: 50px;
+    background-color: #1DDA63;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+.choose-design-cards-container {
+    gap: 3%;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .group-image,
+    .futureImage {
+        display: none;
+    }
+
+    .choose-design-cards-container img {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        display: flex;
+    }
+
+    .choose-design-text-container,
+    .choose-product-text-containe {
+        text-align: center;
+        margin-bottom: 10%;
+    }
+
+    .choose-deisgn-card-container {
+        gap: 0;
+        text-align: center;
+    }
+
+    .choose-deisgn-card-container img {
+        height: 20vh;
+    }
+
+    .choose-your-product-card-container {
+        width: 90%;
+    }
+
+    .choose-product-text-container {
+        margin-bottom: 15%;
+    }
+
+    .pvc-card {
+        width: 80%;
+        margin: auto;
+        margin-left: 10%;
+    }
+
+    .standee-card {
+        width: 80%;
+        margin-top: 10%;
+        margin-left: 15%;
+    }
+
+    .nfc-standee-card {
+        width: 90%;
+        height: 80vh;
+    }
+
+    ul li {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nfc-standee-card .card-body {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nfc-standee-card .row {
+        flex-direction: column;
+    }
+
+    .nfc-standee-card .row .col img {
+        height: 15vh;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .nfc-standee-card {
+        width: 774px;
+        height: 426px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .nfc-standee-card {
+        width: 774px;
+        height: 426px;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .nfc-standee-card {
+        width: 774px;
+        height: 426px;
+    }
+}
