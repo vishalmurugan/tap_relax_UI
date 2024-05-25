@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../mycards/my-cards.css';
 import landlineIcon from "../../../assets/landline-icon.svg";
 import shareIcon from "../../../assets/share-icon.svg";
-import MyAccount from "../my-account/MyAccountPersonal";
+import MyAccount from "../my-account/MyAccount";
 import ApiService from "../../../services/ApiService";
 
 const MyStandee = () => {
@@ -33,7 +33,7 @@ const MyStandee = () => {
     <>
       {Object.keys(showModal).length !==0 && <MyAccount modal={showModal} onClose={closeShare} />}
      
-              <div>
+      {Object.keys(showModal).length ===0 && <div>
               <h2 className="dashboard-title-text">My Standee</h2>
               <div className="my-cards-container">
                 <div className="my-cards-outer-layout p-5">
@@ -130,7 +130,7 @@ const MyStandee = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div>}
       
     </>
   );

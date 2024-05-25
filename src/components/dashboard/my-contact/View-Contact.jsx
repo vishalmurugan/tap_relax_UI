@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import '../dashboard.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useParams } from "react-router-dom";
 import * as Yup from 'yup';
 import { toast } from 'react-toastify';
 import { validate } from "../../../services/ValidationService";
@@ -9,13 +9,14 @@ import emailIcon from "../../../assets/email-icon.svg";
 import locationIcon from "../../../assets/location-icon.svg";
 import bagIcon from "../../../assets/bag-icon.svg";
 import ApiService from "../../../services/ApiService";
-
+import VerticalNavBar from "../../layout/vertical-navbar/vertical-navBar";
 const ViewContact = () => {
 
     const navigate = useNavigate();
     const [data, setData] = useState({});
     const [error, setError] = useState({});
     const [getContactById, setContactById] = useState({});
+    const { id } = useParams();
 
     const updateContactFields = [
         { name: 'email', validation: Yup.string().required().email() },
@@ -23,7 +24,7 @@ const ViewContact = () => {
         { name: 'first_name', validation: Yup.string().required() },
         { name: 'last_name', validation: Yup.string().required() },
         { name: 'address', validation: Yup.string().required() },
-        { name: 'job_title', validation: Yup.string().required() },
+        { name: 'designation', validation: Yup.string().required() },
         { name: 'notes', validation: Yup.string().required() },
     ];
 
@@ -49,7 +50,7 @@ const ViewContact = () => {
             var response = await ApiService.updateContact(request);
             if (response.status === 200) {
                 toast.success(response.data.message)
-                navigate("/contact");
+                navigate("/user/contact");
             } else {
                 toast.error('Validation Error');
             }
@@ -57,21 +58,38 @@ const ViewContact = () => {
     };
 
     useEffect(() => {
-       const getContactById = JSON.parse(sessionStorage.getItem('contact'));
-       if (getContactById) {
-           setData(getContactById);
-           setContactById(getContactById);
-       }
-    }, []);
+      (async()=>{
+      var response=  await ApiService.getContactById(id);
+      if(response.status===200){
+        setData(response?.data?.item);
+       setContactById(response?.data?.item);
+      }
+      })();
+
+    }, [id]);
 
     return (
+     <div style={{ width: '100%', overflowX: 'hidden' }}>
+      <div className="row">
+        <div className="col">
+           <VerticalNavBar />
+        </div>
+        <div className="col-8 dashboard-right-side-layout">
         <div style={{ marginTop: '12%' }}>
             <div className="new-Contact-card-container">
                 <div className="new-Contact-card h-auto p-5">
                     <div className="row">
                         <div className="col-5 mt-5 text-center" style={{ fontSize: '16px' }}>
                             <div className="d-flex justify-content-center">
-                                <div className="share-cards-profile-pic"></div>
+                                <div className="share-cards-profile-pic">
+                                <img
+                                  className="rounded-circle landline-icon"
+                                  src={process.env.REACT_APP_SERVERURL+'default.svg'}
+                                  height={100}
+                                  width={100}
+                                  alt="landlineicon"
+                                />
+                                </div>
                             </div>
                             <p>{getContactById.first_name}{getContactById.last_name}</p>
                             <p> <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-envelope-fill me-3" viewBox="0 0 16 16">
@@ -209,14 +227,14 @@ const ViewContact = () => {
                                                         type="text"
                                                         className="form-control text-center"
                                                         id="job_title"
-                                                        name="job_title"
+                                                        name="designation"
                                                         placeholder="Job title"
                                                         onChange={handleChange}
-                                                        value={data.job_title ? data.job_title : ''}
+                                                        value={data.designation ? data.designation : ''}
                                                     />
                                                 </div>
                                             </div>
-                                            {error && error.job_title && <h4 className="text-danger text-capitalize">{error.job_title}</h4>}
+                                            {error && error.designation && <h4 className="text-danger text-capitalize">{error.designation}</h4>}
                                         </div>
                                     </div>
                                     <div className="form-row">
@@ -244,6 +262,13 @@ const ViewContact = () => {
                                     </div>
                                     <div className="text-end new-contact-button-container col-md-12">
                                         <div>
+                                        <button
+                                                type="button"
+                                                className="new-contact-cancel-btn me-5"
+                                                onClick={()=>navigate("/user/contact")}
+                                            >
+                                                Back
+                                            </button>&nbsp;&nbsp;
                                             <button
                                                 type="submit"
                                                 className="new-contact-save-btn"
@@ -259,6 +284,9 @@ const ViewContact = () => {
                 </div>
             </div>
         </div>
+        </div>
+      </div>
+    </div>
     )
 }
 

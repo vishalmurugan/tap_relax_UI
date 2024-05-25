@@ -154,7 +154,7 @@ const BaseUrl=process.env.REACT_APP_SERVERURL+'api';
 
 	/** get contact list API */
 	const getContactList = (data)=>{
-		return axios.get(`${BaseUrl}/contact/list?page=0&limit=100&status=0`, data)
+		return axios.get(`${BaseUrl}/contact/list`, {params:data})
 		  .then(function (response) {
 			return response;
 		})
@@ -199,6 +199,17 @@ const BaseUrl=process.env.REACT_APP_SERVERURL+'api';
 	/**  Image Upload API */
 	const photoUpload = (data)=>{
 		return axios.post(`${BaseUrl}/account/photo/upload`,data)
+		.then(function (response) {
+			return response;
+		})
+		.catch(function (error) {
+            return error.response;
+        });
+	}		
+
+	/**  view user card details API */
+	const viewUserCardDetails = (shareId)=>{
+		return axios.get(`${BaseUrl}/account/user-card/${shareId}`)
 			.then(function (response) {
 			return response;
 		})
@@ -207,7 +218,28 @@ const BaseUrl=process.env.REACT_APP_SERVERURL+'api';
 		});
 	};
 
+	/**  exchange contact API */
+	const exchangeContact = (data)=>{
+		return axios.post(`${BaseUrl}/contact/exchange-contact`,data)
+			.then(function (response) {
+			return response;
+		})
+			.catch(function (error) {
+			return error.response;
+		});
+	};
 
-    const ApiService={ login,register,otpVerification,shareConatct,forgotPassword, createContact, updateContact, getProfile, getAllMasterRecords, placeOrder, getContactList, getContactById, getAllCardsListForDashboard,viewCardById,photoUpload };
+	/**  update Profile API */
+	const updateProfile = (data)=>{
+		return axios.put(`${BaseUrl}/customer/profile/update`,data)
+			.then(function (response) {
+			return response;
+		})
+			.catch(function (error) {
+			return error.response;
+		});
+	};
+
+    const ApiService={ login,register,otpVerification,shareConatct,forgotPassword, createContact, updateContact, getProfile, getAllMasterRecords, placeOrder, getContactList, getContactById, getAllCardsListForDashboard,viewCardById, viewUserCardDetails, exchangeContact, photoUpload,updateProfile };
 
 export default ApiService;

@@ -90,7 +90,7 @@ const ForgotPasswordPage = () => {
                   />
                 </div>
               </div>
-              {error && error.email && <h4 className="text-danger text-capitalize">{error.email}</h4>}
+              {error && error.email && <h4 className="text-danger ">{error.email}</h4>}
             <button  type="submit" className="btn-login">Send recovery OTP</button>
             </form>
             <p style={{ fontSize: "16px", color: "#1DDA63" }} className="mt-5">Remember password ? <Link to="/login" style={{ textDecoration: "none", color: "#1DDA63" }}>Login</Link></p>

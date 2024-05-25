@@ -3,6 +3,7 @@ import "../account.css";
 import vectorLogo from "../../../assets/vector-logo.svg";
 import Background from "../../../assets/background-image.webp";
 import registerConfirm from "../../../assets/register-confirm.svg";
+import { Link } from "react-router-dom";
 
 const RegisterConfirmationPage = () => {
   return (
@@ -31,9 +32,9 @@ const RegisterConfirmationPage = () => {
               <p className="mt-5" style={{ fontSize: "19px" }}>
                 Your account has been created successfully
               </p>
-              <p style={{ fontSize: "16px", color: '#1DDA63' }}>
-                Wait while we redirect you to the Dashboard
-              </p>
+              <Link to="/login" style={{ fontSize: "16px", color: '#1DDA63',cursor:'pointer' }}>
+                Click Here To Login
+              </Link>
             </div>
           </div>
         </div>

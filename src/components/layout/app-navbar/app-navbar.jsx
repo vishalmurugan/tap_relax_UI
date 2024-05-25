@@ -28,7 +28,7 @@ const AppNavBar = () => {
               />
             </svg>
           </span>
-          <Link className="ms-3" style={{ fontSize: "19px", color: 'white', textDecoration: 'none' }}>Account</Link>
+          <Link to="/user/my-cards" className="ms-3" style={{ fontSize: "19px", color: 'white', textDecoration: 'none' }}>Account</Link>
         </Navbar.Text>
       </Navbar.Collapse>
     </Navbar>

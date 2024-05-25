@@ -14,6 +14,7 @@ import {
   MDBModalHeader,
   MDBModalTitle,
   MDBModalBody,
+  MDBModalFooter,
 } from 'mdb-react-ui-kit';
 import instagramIcon from "../../assets/instagram-icon.svg";
 import whatsappIcon from "../../assets/whatsapp-icon.svg";
@@ -310,10 +311,12 @@ const PersonalInformation = ({setData,data ,setPage,socialMedia}) => {
                 <input type="text" className="form-control" id="exampleInputEmail1" value={link.url||''} onChange={(e)=>setLink(prev=>({...prev,url:e.target.value}))} placeholder="Enter Social media Link" />
               </div>
             </MDBModalBody>
-
+            <MDBModalFooter>
+              <MDBBtn className="text-black fs-3"  onClick={()=>setBasicModal(!basicModal)} style={{ backgroundColor: '#1DDA63', border: 'none' }}>Close</MDBBtn>
               <MDBBtn className="text-black fs-3"  onClick={saveLink} style={{ backgroundColor: '#1DDA63', border: 'none' }}>
                 Save
               </MDBBtn>
+              </MDBModalFooter>
           </MDBModalContent>
         </MDBModalDialog>
       </MDBModal>

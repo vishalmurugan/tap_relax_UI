@@ -4,3 +4,6 @@
     background-color: #070707;
     color: white;
 }
+.Toastify__toast-container{
+    z-index: 9999999 !important;
+  }

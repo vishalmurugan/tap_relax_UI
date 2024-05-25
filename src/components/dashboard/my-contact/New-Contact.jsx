@@ -25,7 +25,7 @@ const NewContact = () => {
         { name: 'first_name', validation: Yup.string().required() },
         { name: 'last_name', validation: Yup.string().required() },
         { name: 'address', validation: Yup.string().required() },
-        { name: 'job_title', validation: Yup.string().required() },
+        { name: 'designation', validation: Yup.string().required() },
     ]
 
     /** 
@@ -192,15 +192,15 @@ const NewContact = () => {
                                             <input
                                                 type="text"
                                                 className="form-control text-center"
-                                                id="job_title"
-                                                name="job_title"
+                                                id="designation"
+                                                name="designation"
                                                 placeholder="Job title"
                                                 onChange={handleChange}
-                                                value={data.job_title ? data.job_title : ''}
+                                                value={data.designation ? data.designation : ''}
                                             />
                                         </div>
                                     </div>
-                                    {error && error.job_title && <h4 className="text-danger text-capitalize">{error.job_title}</h4>}
+                                    {error && error.designation && <h4 className="text-danger text-capitalize">{error.designation}</h4>}
                                 </div>
                             </div>
                             <div className="text-end new-contact-button-container col-md-12">

@@ -17,6 +17,7 @@ const RegisterPage = () => {
   const navigate = useNavigate();
   const [data, setData]=useState({});
   const [error, setError]=useState({});
+  const [showText,setPassword]=useState(false);
 
   const registerFields = [
     { name: 'email', validation: Yup.string().required().email() },
@@ -108,7 +109,7 @@ const RegisterPage = () => {
                     />
                   </div>
                 </div>
-                {error && error.username && <h4 className="text-danger text-capitalize">{error.username}</h4>}
+                {error && error.username && <h4 className="text-danger ">{error.username}</h4>}
                 <div className="form-group mt-5">
                   <div className="input-group">
                     <div className="input-group-prepend">
@@ -126,7 +127,7 @@ const RegisterPage = () => {
                     />
                   </div>
                 </div>
-                {error && error.email && <h4 className="text-danger text-capitalize">{error.email}</h4>}
+                {error && error.email && <h4 className="text-danger ">{error.email}</h4>}
                 <div className="form-group mt-5">
                   <div className="input-group">
                     <div className="input-group-prepend">
@@ -144,7 +145,7 @@ const RegisterPage = () => {
                     />
                   </div>
                 </div>
-                {error && error.mobile_number && <h4 className="text-danger text-capitalize">{error.mobile_number}</h4>}
+                {error && error.mobile_number && <h4 className="text-danger ">{error.mobile_number}</h4>}
                 <div className="form-group mt-5">
                   <div className="input-group">
                     <div className="input-group-prepend">
@@ -153,7 +154,7 @@ const RegisterPage = () => {
                       </span>
                     </div>
                     <input
-                      type="password"
+                       type={showText?"text":"password"}
                       className="form-control text-center"
                       value={data.password?data.password:''}
                       name="password" onChange={handleChange} 
@@ -161,7 +162,7 @@ const RegisterPage = () => {
                     />
                   </div>
                 </div>
-                {error && error.password && <h4 className="text-danger text-capitalize">{error.password}</h4>}
+                {error && error.password && <h4 className="text-danger ">{error.password}</h4>}
                 <div className="form-group mt-5">
                   <div className="input-group">
                     <div className="input-group-prepend">
@@ -170,7 +171,7 @@ const RegisterPage = () => {
                       </span>
                     </div>
                     <input
-                      type="password"
+                      type={showText?"text":"password"}
                       className="form-control text-center"
                       id="reEnterPassword"
                       name="confirm_password"
@@ -180,9 +181,9 @@ const RegisterPage = () => {
                     />
                   </div>
                 </div>
-                {error && error.confirm_password && <h4 className="text-danger text-capitalize">{error.confirm_password}</h4>}
+                {error && error.confirm_password && <h4 className="text-danger ">{error.confirm_password}</h4>}
              
-              <p className="text-right me-5">
+              <p className="text-right me-5" onClick={()=>setPassword(!showText)}>
                 <Link
                   className="me-4"
                   style={{
@@ -190,6 +191,7 @@ const RegisterPage = () => {
                     color: "#1DDA63",
                     textDecoration: "none",
                   }}
+                 
                 >
                   Show Password
                   <span>

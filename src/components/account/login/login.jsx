@@ -111,7 +111,7 @@ const LoginPage = () => {
                   </div>
                 </div>
                 {error && error.email && (
-                  <h4 className="text-danger text-capitalize">{error.email}</h4>
+                  <h4 className="text-danger ">{error.email}</h4>
                 )}
                 <div className="form-group mt-5">
                   <div className="input-group">
@@ -132,7 +132,7 @@ const LoginPage = () => {
                   </div>
                 </div>
                 {error && error.password && (
-                  <h4 className="text-danger text-capitalize">{error.password}</h4>
+                  <h4 className="text-danger ">{error.password}</h4>
                 )}
 
                 <p className="text-right me-5">

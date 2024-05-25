@@ -18,7 +18,6 @@ import DashboardLayout from "../src/components/layout/dashboard-layout";
 import PersonalPreviewView from "./components/preview/personal-preview";
 import CompanyPreviewView from "./components/preview/company-preview";
 import ShareCard from "./components/dashboard/share-card/ShareCard";
-import ShareInfo from "./components/mobile-screens/share-info";
 import ConnectInfo from "./components/mobile-screens/connect-info";
 import ProfileInfo from "./components/mobile-screens/profile-info";
 import ShareContact from "./components/dashboard/share-card/shareContact";
@@ -29,6 +28,7 @@ import Home from "./components/layout/home";
 import ChooseSharedComponent from "./components/shared/choose-shared-component";
 import PersonalInformationSharedComponent from "./components/shared/personal-info-shared-component";
 import UpdateCompanyInfo from "./components/update-info/update-company-info/update.company.info";
+import ViewContact from "./components/dashboard/my-contact/View-Contact";
 import {GlobalStore} from "./Store";
 
 function App() {
@@ -88,18 +88,16 @@ function App() {
           <Route path="rewards" element={<DashboardLayout />} />
           <Route path="contact" element={<DashboardLayout />} />
           <Route path="new-contact" element={<DashboardLayout />} />
-          <Route path="view-contact" element={<DashboardLayout />} />
+          <Route path="view-contact/:id" element={<ViewContact />} />
           <Route path="share-card" element={<ShareCard />} />
 
 
           {/* mobile screens */}
-          <Route path="share-info" element={<ShareInfo />} />
           <Route path="connect-info" element={<ConnectInfo />} />
-          <Route path="profile-info" element={<ProfileInfo />} />
-
           <Route path="choose-card" element={<ChooseSharedComponent />} />
           <Route path="info-steps" element={<PersonalInformationSharedComponent />} />
           </Route>
+          <Route path="profile-info/:id" element={<ProfileInfo />} />
       </Routes>
     </BrowserRouter>
     </div>

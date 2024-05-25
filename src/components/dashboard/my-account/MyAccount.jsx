@@ -14,7 +14,7 @@ import ShareCard from "../share-card/ShareCard";
 import ApiService from "../../../services/ApiService";
 
 const MyAccount = ({ onClose,modal }) => {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
   const [card, setCard] = useState({});
   const [socialIcons] = useState([
     {
@@ -83,12 +83,13 @@ const MyAccount = ({ onClose,modal }) => {
 
   const closeShare = () => {
     setShowModal(!showModal);
+    onClose()
   };
 
   return (
     <>
     {showModal && (<ShareCard card={card} onClose={closeShare} />)}
-    {Object.keys(modal).length !==0 && !showModal && (
+    {false && Object.keys(modal).length !==0 && !showModal && (
               <div
               className="share-contact-overlay"
               style={{

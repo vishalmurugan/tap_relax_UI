@@ -15,6 +15,7 @@ import {
   MDBModalHeader,
   MDBModalTitle,
   MDBModalBody,
+  MDBModalFooter
 } from 'mdb-react-ui-kit';
 import ApiService from "../../services/ApiService";
 
@@ -355,9 +356,12 @@ const PersonalCompanyInformation = ({setData,data ,setPage,socialMedia,type}) =>
               </div>
             </MDBModalBody>
 
+              <MDBModalFooter>
+              <MDBBtn className="text-black fs-3"  onClick={()=>setBasicModal(!basicModal)} style={{ backgroundColor: '#1DDA63', border: 'none' }}>Close</MDBBtn>
               <MDBBtn className="text-black fs-3"  onClick={saveLink} style={{ backgroundColor: '#1DDA63', border: 'none' }}>
                 Save
               </MDBBtn>
+              </MDBModalFooter>
           </MDBModalContent>
         </MDBModalDialog>
       </MDBModal>

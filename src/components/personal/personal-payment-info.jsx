@@ -37,7 +37,7 @@ const PersonalPaymentInformation = ({setData,data ,setPage}) => {
 
   return (
     <>
-    <form style={{ marginTop: '20%' }}>
+    <form style={{ marginTop: '20%' }} autoComplete="off">
       <h1 className="text-center" style={{ fontSize: '30px' }}>Enter Payment Link</h1>
       <div className="d-flex justify-content-center align-items-center">
         <div className="form-group col-md-8 mt-5 mb-5">

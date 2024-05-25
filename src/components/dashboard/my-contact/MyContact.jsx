@@ -6,6 +6,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
 const MyContact = () => {
     const navigate = useNavigate();
+    const [type,setType]=useState(0);
     const [data, setData] = useState([]);
     const [contactId, setContactId] = useState();
 
@@ -16,7 +17,11 @@ const MyContact = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const masterResponse = await ApiService.getContactList();
+                var request={};
+                request.page=0;
+                request.limit=1000;
+                request.status=type
+                const masterResponse = await ApiService.getContactList(request);
                 if (masterResponse.status === 200) {
                     setData(masterResponse.data.items);
                     setContactId(masterResponse.data.items);
@@ -27,7 +32,7 @@ const MyContact = () => {
         };
 
         fetchData();
-    }, []);
+    }, [type]);
 
     const viewContact = async (id) => {
         const contactById = await ApiService.getContactById(id).then(
@@ -65,14 +70,14 @@ const MyContact = () => {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu variant="dark" style={{ padding: '5px' }}>
-                                <Dropdown.Item className="text-white text-decoration-none fs-4">
+                                <Dropdown.Item className="text-white text-decoration-none fs-4" onClick={()=>setType(1)}>
                                     Exchanged Contact
-                                    <input class="form-check-input ms-2" type="radio" name="contact" id="contactDefault" />
+                                    <input class="form-check-input ms-2" checked={type===1} type="radio" name="contact" id="contactDefault" />
                                 </Dropdown.Item>
                                 <hr style={{ border: '1px solid gray' }} />
-                                <Dropdown.Item className="text-white text-decoration-none fs-4">
+                                <Dropdown.Item className="text-white text-decoration-none fs-4" onClick={()=>setType(0)}>
                                     Contact feeded
-                                    <input class="form-check-input ms-5" type="radio" name="contact" id="contactDefault" />
+                                    <input class="form-check-input ms-5" checked={type===0} type="radio" name="contact" id="contactDefault" />
                                 </Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
@@ -96,7 +101,7 @@ const MyContact = () => {
                                     <td>{item.first_name} {item.last_name}</td>
                                     <td>{new Date(item.createdAt).toLocaleDateString()}</td>
                                     <td>{item.is_exchange === 1 ? 'Exchanged' : ''}</td>
-                                    <td>
+                                    {type ===0 && <td>
                                     <Dropdown>
                                         <Dropdown.Toggle variant="dark" id="dropdown-basic" toggle={false}>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#1DDA63" className="bi bi-three-dots bg-transparent" viewBox="0 0 16 16">
@@ -106,15 +111,15 @@ const MyContact = () => {
 
                                         <Dropdown.Menu variant="dark" style={{ padding: '5px' }}>
                                             <Dropdown.Item href="#/action-1" className="text-decoration-none fs-4">
-                                            <p className="bg-transparent"><Link style={{ color:'white', textDecoration: 'none', backgroundColor: 'transparent' }} onClick={() => viewContact(item.id)}>View contact</Link></p>
+                                            <p className="bg-transparent"><Link style={{ color:'white', textDecoration: 'none', backgroundColor: 'transparent' }} to={'/user/view-contact/'+item.id}>View contact</Link></p>
                                             </Dropdown.Item>
-                                            <hr style={{ border: '1px solid gray' }} />
+                                            {/* <hr style={{ border: '1px solid gray' }} />
                                             <Dropdown.Item href="#/action-2" className="text-decoration-none fs-4">
                                                 <p className="bg-transparent">Delete Contact</p>
-                                            </Dropdown.Item>
+                                            </Dropdown.Item> */}
                                         </Dropdown.Menu>
                                     </Dropdown>
-                                    </td>
+                                    </td>}
                                 </tr>
                             ))}
                         </tbody>

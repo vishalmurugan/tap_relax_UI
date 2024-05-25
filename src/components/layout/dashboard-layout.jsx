@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import MyOrders from "../dashboard/my-orders/MyOrders";
-import MyAccount from "../dashboard/my-account/MyAccountPersonal";
+import MyAccount from "../dashboard/my-account/MyAccount";
 import MyStandee from "../dashboard/my-standee/MyStandee";
 import Profile from "../dashboard/profile/Profile";
 import Rewards from "../dashboard/rewards/Rewards";

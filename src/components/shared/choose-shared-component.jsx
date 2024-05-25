@@ -53,7 +53,7 @@ const ChooseSharedComponent = () => {
                         This is the only business essentials you’ll ever need
                     </p>
                     <div className="row choose-your-product-card-container" style={{ marginTop: '5%' }}>
-                        <div className="col-4 ms-5 p-2">
+                        <div className="col-6">
                             <div className="pvc-card" style={{ width: '30rem' }}>
                                 <div className="card-body">
                                     <h3 className="text-center mt-5">PVC CARD</h3>
@@ -69,7 +69,7 @@ const ChooseSharedComponent = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-auto">
+                        <div className="col-6">
                             <div className="standee-card" style={{ width: '30rem' }}>
                                 <div className="card-body">
                                     <h3 className="text-center mt-5">STANDEE</h3>

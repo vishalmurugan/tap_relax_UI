@@ -15,6 +15,7 @@ const OTPVerifiedPage = () => {
   const navigate = useNavigate();
   const [data, setData] = useState({});
   const [error, setError] = useState({});
+  const [showText,setPassword]=useState(false);
 
   const setNewPasswordFields = [
     { name: 'password', validation: Yup.string().required() },
@@ -86,7 +87,7 @@ const OTPVerifiedPage = () => {
                       </span>
                     </div>
                     <input
-                      type="password"
+                      type={showText?"text":"password"}
                       className="form-control text-center"
                       id="password"
                       name="password"
@@ -105,7 +106,7 @@ const OTPVerifiedPage = () => {
                       </span>
                     </div>
                     <input
-                      type="password"
+                     type={showText?"text":"password"}
                       className="form-control text-center"
                       id="confirm_password"
                       name="confirm_password"
@@ -116,7 +117,7 @@ const OTPVerifiedPage = () => {
                   </div>
                 </div>
                 {error && error.confirm_password && <h4 className="text-danger text-capitalize">{error.confirm_password}</h4>}
-              <p className="text-right me-5">
+              <p className="text-right me-5" onClick={()=>setPassword(!showText)}>
                 <Link
                   className="me-4"
                   style={{

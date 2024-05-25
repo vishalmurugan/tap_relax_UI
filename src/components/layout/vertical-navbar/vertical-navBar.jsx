@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
 import "./vertical-navBar.css";
 import { Link, useLocation,useNavigate } from "react-router-dom";
 import navLogo from "../../../assets/nav-logo.svg";
+import  GlobalStore  from "../../../Store";
 
 const VerticalNavBar = () => {
   const location = useLocation();
   const navigation = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const {getProfile}= useContext(GlobalStore);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  useEffect(()=>{},[])
 
   return (
     <div>
@@ -47,7 +51,7 @@ const VerticalNavBar = () => {
                   />
                 </svg>
               </span>
-              <Link to="/user/account" className="" style={{ fontSize: "19px", color: 'white', textDecoration: 'none' }}>Account</Link>
+              <Link  className="" style={{ fontSize: "19px", color: 'white', textDecoration: 'none' }}>Account</Link>
             </div>
           </div>
           <div className="wrapper">
@@ -55,7 +59,7 @@ const VerticalNavBar = () => {
               <div className="nav-rounded-image mt-5">
                           <img
                               className="rounded-circle landline-icon"
-                              src={process.env.REACT_APP_SERVERURL+'default.svg'}
+                              src={process.env.REACT_APP_SERVERURL+(getProfile?.photo ||'default.svg')}
                               height={150}
                               width={150}
                               alt="landlineicon"
@@ -69,7 +73,7 @@ const VerticalNavBar = () => {
                 <li><NavItem to="/user/profile">Profile</NavItem></li>
                 <li><NavItem to="/user/orders">My Orders</NavItem></li>
                 <li><NavItem to="/user/contact">Contact</NavItem></li>
-                <li><NavItem to="/user/rewards">Rewards</NavItem></li>
+                {/* <li><NavItem to="/user/rewards">Rewards</NavItem></li> */}
                 <li className="ms-auto"><NavItem to="/login" onClick={()=>localStorage.clear()}>Logout</NavItem></li>
               </ul>
             </div>

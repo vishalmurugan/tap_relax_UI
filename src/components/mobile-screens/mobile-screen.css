@@ -36,7 +36,7 @@
 }
 
 .share-form-group input[type="text"],
-input[type="email"] {
+input[type="email"], input[type="number"] {
     border-radius: 90px;
     background-color: #D9D9D9;
     width: 284px;
@@ -59,7 +59,7 @@ input[type="email"] {
 .share-info-rounded-image {
     width: 87px;
     height: 87px;
-    background-image: url('../../assets/profile-pic.png');
+    /* background-image: url('../../assets/profile-pic.png'); */
     background-size: cover;
     border-radius: 50%;
     overflow: hidden;

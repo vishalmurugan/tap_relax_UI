@@ -3,7 +3,7 @@ import "./delivery-address/delivery-address.css";
 import Group417 from "../assets/Group 417 (1).png"
 import { useNavigate } from "react-router-dom";
 
-const PaymentSuccess = () => {
+const PaymentSuccess = ({name}) => {
 
 const navigate=useNavigate();
 
@@ -12,8 +12,9 @@ const changePath=()=>{
 }
   return (
     <div>
-        <div className="text-center">
+        <div className="text-center image-container">
           <img src={Group417} alt="Group417" />
+          <div class="centered-text">{name}</div>
           <div className="payment-sucess-message">
           <h1>Congratulations your order has been placed successfully</h1>
           <p style={{ fontSize: "17px" }}>

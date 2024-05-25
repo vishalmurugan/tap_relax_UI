@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./my-cards.css";
 import landlineIcon from "../../../assets/landline-icon.svg";
 import shareIcon from "../../../assets/share-icon.svg";
-import MyAccount from "../my-account/MyAccountPersonal";
+import MyAccount from "../my-account/MyAccount";
 import ApiService from "../../../services/ApiService";
 
 const MyCards = () => {
@@ -42,7 +42,7 @@ const MyCards = () => {
     <>
       {Object.keys(showModal).length !==0 && <MyAccount modal={showModal} onClose={closeShare} />}
      
-              <div>
+             {Object.keys(showModal).length ===0 &&  <div>
               <h2 className="dashboard-title-text">My cards</h2>
               <div className="my-cards-container">
                 <div className="my-cards-outer-layout p-5">
@@ -83,14 +83,6 @@ const MyCards = () => {
                               <h3 className="bg-transparent text-start">
                                 Contact Info
                               </h3>
-                              {/*<p className="bg-transparent text-start">
-                                <img
-                                  className="landline-icon me-3"
-                                  src={landlineIcon}
-                                  alt="landlineicon"
-                                />
-                                {card.landline}
-                      </p>*/}
                               <p className="bg-transparent text-start">
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +131,7 @@ const MyCards = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div>}
       
     </>
   );

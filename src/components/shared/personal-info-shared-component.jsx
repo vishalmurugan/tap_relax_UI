@@ -74,7 +74,7 @@ const PersonalInformationSharedComponent = () => {
               {step === 5 && <DeliveryInformation setData={setDelivery} data={delivery_details} setPage={setStep}/>}
               {step === 6 && <TotalOrder setData={setOrder} data={order_details} setPage={setStep}/>}
               {step === 7 && <SelectPayment data={{isSkip,personal_details,company_details,payment_details,order_details,delivery_details}} setPage={setStep}/>}
-              {step === 8 && <PaymentSuccess setPage={setStep}/>}
+              {step === 8 && <PaymentSuccess name={order_details?.card_name} setPage={setStep}/>}
           
           </div>
         </div>

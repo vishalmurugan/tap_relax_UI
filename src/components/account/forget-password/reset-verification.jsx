@@ -93,7 +93,7 @@ const ResetVerificationCodePage = () => {
               
               <button type="submit" className="btn-login">Verify code</button>
               </form>
-              <p style={{ fontSize: "16px" }} className="mt-5"><Link to="" style={{ textDecoration: "none", color: "#1DDA63" }}>Resend code</Link></p>
+              {/* <p style={{ fontSize: "16px" }} className="mt-5"><Link to="" style={{ textDecoration: "none", color: "#1DDA63" }}>Resend code</Link></p> */}
             </div>
           </div>
         </div>
