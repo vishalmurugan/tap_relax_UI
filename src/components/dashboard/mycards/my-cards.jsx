@@ -21,7 +21,7 @@ const MyCards = () => {
 (async function(){
   const response =await ApiService.getAllCardsListForDashboard({type:0});
   if(response.status === 200) {
-      setCardsData(response.data.items);
+      setCardsData(response.data?.items||[]);
     }
 })()
       

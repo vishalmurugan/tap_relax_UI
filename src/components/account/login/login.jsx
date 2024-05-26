@@ -57,6 +57,11 @@ const LoginPage = () => {
         }
       } else {
         toast.error(response.data.error);
+        if(response?.data?.otp){
+          sessionStorage.setItem('userId',response?.data?.userId);
+          navigate("/register-verification");
+        }
+       
       }
     }
     //navigate("/user/my-cards");

@@ -12,12 +12,27 @@ const PersonalPaymentInformation = ({setData,data ,setPage}) => {
     { name: 'payment_links', validation:  Yup.array().min(1, 'At least one payment link is required.') }
   ]
  
-    const addLink=()=>{
+    const addLink=async ()=>{
         if(link){
-        setData((prevState) => ({
-          payment_links: [...prevState.payment_links, link]
-        }));
-        setLink('')
+
+          setData((prevState) => {
+            const updatedPaymentLinks = [...prevState.payment_links, link];
+            return {
+              ...prevState,
+              payment_links: updatedPaymentLinks,
+            };
+          });
+
+  
+        setLink('');
+
+      const updatedData = {
+        ...data,
+        payment_links: [...data.payment_links, link],
+      };
+
+      const errors = await validate(updatedData, fields);
+      setError(errors);
       }
     }
 

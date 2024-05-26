@@ -181,7 +181,7 @@ const RegisterPage = () => {
                     />
                   </div>
                 </div>
-                {error && error.confirm_password && <h4 className="text-danger ">{error.confirm_password}</h4>}
+                {data?.password !== data?.confirm_password && error && error.confirm_password && <h4 className="text-danger ">{error.confirm_password}</h4>}
              
               <p className="text-right me-5" onClick={()=>setPassword(!showText)}>
                 <Link

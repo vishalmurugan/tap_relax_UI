@@ -108,7 +108,7 @@ const PersonalCompanyInformation = ({setData,data ,setPage,socialMedia,type}) =>
     }
   }
 
-  const saveLink=()=>{
+  const saveLink=async()=>{
     var arr=media.map(item=>{
       if(item.id===link.id){
         return {...item,url:link.url}
@@ -127,6 +127,9 @@ const PersonalCompanyInformation = ({setData,data ,setPage,socialMedia,type}) =>
         })
     }));
   setBasicModal(!basicModal);
+  const Errors = await validate({social_media: arr }, personalCompanyFields);
+  setError({ ...error, social_media: Errors['social_media'] });
+  
   }
 
   return (

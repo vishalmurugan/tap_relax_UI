@@ -90,8 +90,7 @@ const Profile = () => {
                 <img src={process.env.REACT_APP_SERVERURL+(profileData?.photo || 'default.svg')} alt="selectedImage" className="bg-white" style={{ width: "100px", height: "100px" }}/> }
               </div>
             </label>
-            {editMode ?<input label="upload image" type="file" id="profileImageInput" accept="image/jpeg, image/png" hidden onChange={handleImageChange} /> :
-            <input label="upload image" type="file" id="profileImageInput" accept="image/jpeg, image/png" hidden /> }
+            {editMode && <input label="upload image" type="file" id="profileImageInput" accept="image/jpeg, image/png" hidden onChange={handleImageChange} /> }
           
             </div>
             <div className="col-10 mt-5">

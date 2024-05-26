@@ -14,7 +14,7 @@ const MyStandee = () => {
 (async function(){
   const response =await ApiService.getAllCardsListForDashboard({type:1});
   if(response.status === 200) {
-      setCardsData(response.data.items);
+      setCardsData(response.data?.items || []);
     }
 })()
       

@@ -57,8 +57,8 @@ input[type="email"], input[type="number"] {
 }
 
 .share-info-rounded-image {
-    width: 87px;
-    height: 87px;
+    /* width: 87px;
+    height: 87px; */
     /* background-image: url('../../assets/profile-pic.png'); */
     background-size: cover;
     border-radius: 50%;

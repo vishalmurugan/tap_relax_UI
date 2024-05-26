@@ -16,7 +16,7 @@ const DeliveryAddress = ({data,setData,setPage}) => {
     { name: 'mobile_number', validation: Yup.string().required().matches(/^\d{10}$/, 'Phone number must be 10 digits') },
 	  { name: 'shipping_address', validation: Yup.string().required() },
 	  { name: 'city', validation: Yup.string().required() },
-    { name: 'country', validation: Yup.string().required() },
+   // { name: 'country', validation: Yup.string().required() },
     { name: 'pincode', validation: Yup.string().required() },
     { name: 'state', validation: Yup.string().required() },
   ]
@@ -213,7 +213,7 @@ const DeliveryAddress = ({data,setData,setPage}) => {
                   </div>
                   {error && error.state && <h4 className="text-danger text-capitalize">{error.state}</h4>}
                 </div>
-                <div className="col-md-6">
+                {/* <div className="col-md-6">
                   <div className="form-group  mt-5">
                     <div className="input-group">
                       <div className="input-group-prepend">
@@ -233,7 +233,7 @@ const DeliveryAddress = ({data,setData,setPage}) => {
                     </div>
                   </div>
                   {error && error.country && <h4 className="text-danger text-capitalize">{error.country}</h4>}
-                </div>
+                </div> */}
               </div>
               <div className="text-end">
                 <button type="button" onClick={handleSubmit} className="delivery-address-next-btn ms-5">

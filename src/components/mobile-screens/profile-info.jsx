@@ -95,10 +95,11 @@ const ProfileInfo = () => {
                             <img src={Vector} alt="Vector" className="bg-white" style={{ height: '25px' }} />
                             <p className="share-info-text-title bg-white">TAPRELAX</p>
                         </div>
-                        <div className="bg-white" style={{ marginTop: '30%' }}>
-                            <div className="card mt-5 p-5 d-flex align-items-center" style={{ background: 'linear-gradient(to right, #DCDCDC, #F8F8F8)', borderRadius: '10px', border: '1px solid #DCDCDC' }}>
-                            
-                                <div className="nav-rounded-image">
+                        
+
+                            <div className="card mt-5 p-5" style={{ background: 'linear-gradient(to right, #DCDCDC, #F8F8F8)', borderRadius: '10px', border: '1px solid #DCDCDC' }}>
+                                    <div className="share-info-rounded-image">
+                                    
                           <img
                               className="rounded-circle landline-icon"
                               src={process.env.REACT_APP_SERVERURL+(profile?.photo ||'default.svg')}
@@ -107,13 +108,13 @@ const ProfileInfo = () => {
                               alt="landlineicon"
                           />
                                 
-                                </div>
-                                <div className="card-body text-center bg-transparent">
-                                    <h2 className="bg-transparent">Would you like to share</h2>
-                                    <h2 className="bg-transparent">Your info back with {profile?.username}</h2>
-                                </div>
+                                    </div>
+                                    <div className="card-body text-center bg-transparent text-capitalize">
+                                
+                                <h2 className="bg-transparent">{profile?.username}</h2>
+                                <h3 className="bg-transparent text-secondary">{companyDetails?.description}</h3>
                             </div>
-                        </div>
+                                </div>
                         <div className="mt-5 d-flex justify-content-center bg-white">
                             <button type="button" className="contact-btn me-5" onClick={handleExchangeContact}>Exchange contact</button>
                             <button type="button" className="contact-btn">Save contact</button>

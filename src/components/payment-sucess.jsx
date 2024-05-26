@@ -21,11 +21,12 @@ const changePath=()=>{
             We’ll keep updating you once the product has been dispatched.
             Usually it takes maximum 48 Hours
           </p>
+          <div className="text-center">
+          <button className="payment-continue-btn" onClick={changePath}>Go To DashBoard</button>
+          </div>
           </div>
         </div>
-        <div className="text-center">
-        <button className="payment-continue-btn" onClick={changePath}>Go To DashBoard</button>
-        </div>
+       
     </div>
   );
 };

@@ -116,7 +116,7 @@ const OTPVerifiedPage = () => {
                     />
                   </div>
                 </div>
-                {error && error.confirm_password && <h4 className="text-danger text-capitalize">{error.confirm_password}</h4>}
+                {data?.confirm_password !== data?.password && error && error.confirm_password && <h4 className="text-danger text-capitalize">{error.confirm_password}</h4>}
               <p className="text-right me-5" onClick={()=>setPassword(!showText)}>
                 <Link
                   className="me-4"

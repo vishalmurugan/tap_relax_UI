@@ -14,21 +14,15 @@ const UpdatePersonalInfo = ({setPage,setSkip,type}) => {
   }
 
   return (
-    <div>
+    <div className="d-flex justify-content-center" style={{marginTop:'10%'}}>
       <div className="update-container">
-        <div style={{ textAlign: "right" }}>
-          <img
-            src={bgPattern}
-            alt="bgPattern"
-            className="group_image"
-          />
-        </div>
+        
         <div className="personal-info-text-container">
           <h3 className="text-center" style={{ fontSize: "30px" }}>Update {type===0?'your':'Company'} information</h3>
           <p className="text-center" style={{ fontSize: "17px" }}>Demo content</p>
         </div>
         <div className="d-flex justify-content-center mt-5 update-your-info-container">
-          <div className="row">
+          <div className="row pt-5">
            {type===0 && <div className="col">
               <div className="personal-info-card text-center">
                 <div className="card-body mt-5">
@@ -55,7 +49,7 @@ const UpdatePersonalInfo = ({setPage,setSkip,type}) => {
             </div>
           </div>
         </div>
-        <p className="text-center mt-5"><Link to="/user/info-steps" onClick={changeSkip} style={{ fontSize: '16px', color: '#1DDA63', textDecoration: 'none' }}>Skip for now</Link></p>
+        {/* <p className="text-center mt-5"><Link to="/user/info-steps" onClick={changeSkip} style={{ fontSize: '16px', color: '#1DDA63', textDecoration: 'none' }}>Skip for now</Link></p> */}
       </div>
     </div>
   );
